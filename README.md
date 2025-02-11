@@ -61,3 +61,69 @@ Contributions are welcome! If you have any improvements, bug fixes, or additiona
 Feel free to explore the repository and use the examples to enhance your understanding of `psycopg` and PostgreSQL. If you have any questions or need further assistance, please open an issue in the repository.
 
 Happy coding! 🚀
+
+# Psycopg Operations / Operações com Psycopg
+
+Este repositório contém exemplos e utilitários para trabalhar com a biblioteca `psycopg`, um adaptador popular do PostgreSQL para Python. O objetivo deste repositório é fornecer exemplos práticos e operações que podem ajudá-lo a começar a usar `psycopg` e PostgreSQL em seus projetos Python.
+
+## Índice
+
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [Exemplos](#exemplos)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
+
+## Instalação
+
+Para usar os exemplos e utilitários deste repositório, você precisa ter Python e PostgreSQL instalados em sua máquina. Você pode instalar as dependências necessárias usando `pip`:
+
+```bash
+pip install psycopg2-binary
+```
+
+Alternativamente, você pode instalar as dependências do arquivo `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Uso
+
+Este repositório contém vários exemplos de como usar `psycopg` para interagir com um banco de dados PostgreSQL. Cada exemplo está contido em seu próprio script Python e é documentado para ajudá-lo a entender as operações sendo realizadas.
+
+Para executar um exemplo, simplesmente execute o script Python correspondente:
+
+```bash
+python exemplo_script.py
+```
+
+Certifique-se de atualizar os parâmetros de conexão do banco de dados (como `host`, `database`, `user`, e `password`) nos scripts para corresponder à sua configuração do PostgreSQL.
+
+## Exemplos
+
+Aqui estão alguns dos exemplos incluídos neste repositório:
+
+- **Conexão Básica**: Demonstra como estabelecer uma conexão com um banco de dados PostgreSQL.
+- **Operações CRUD**: Mostra como realizar operações de Create, Read, Update, e Delete em um banco de dados PostgreSQL.
+- **Gerenciamento de Transações**: Ilustra como gerenciar transações usando `psycopg`.
+- **Tratamento de Erros**: Fornece exemplos de como tratar erros e exceções ao trabalhar com `psycopg`.
+
+Cada exemplo é projetado para ser auto-contido e fácil de entender, com comentários explicando cada passo.
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você tem melhorias, correções de bugs, ou exemplos adicionais que gostaria de compartilhar, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+1. Faça um fork do repositório.
+2. Crie uma nova branch para sua feature ou correção de bug.
+3. Faça commit das suas mudanças.
+4. Envie sua branch e abra um pull request.
+
+---
+
+Sinta-se à vontade para explorar o repositório e usar os exemplos para aprimorar seu entendimento de `psycopg` e PostgreSQL. Se você tiver alguma dúvida ou precisar de mais assistência, por favor abra uma issue no repositório.
+
+Boa codagem! 🚀
+
+---
