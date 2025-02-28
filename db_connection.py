@@ -1,23 +1,23 @@
 import os, psycopg2
 
-current_environment = os.environ.get('ENVIRONMENT')
+current_environment = os.environ.get('AMBIENTE')
 dbpass = os.environ.get('DBPASS')
-in_production = current_environment == "PRODUCTION"
+in_production = current_environment == "PRODUCAO"
 
 connection_infos = {
-    "dev": {
-        "dbname": "",
-        "user": "",
-        "password": "",
-        "host": "",
-        "port": ""
+    "dev":{
+        "dbname": "db_hidro",
+        "user": "db_hidro",
+        "password": "JUXmBki9Pq6E2mWaenqz",
+        "host": "afiradatabasev2-developer.csucdunwmefz.us-east-1.rds.amazonaws.com",
+        "port": "5432"
     },
     "prod": {
-        "dbname": "",
-        "user": "",
+        "dbname": "db_hidro",
+        "user": "db_hidro",
         "password": dbpass,
-        "host": "",
-        "port": ""
+        "host": "afiraiodatabasev2.csucdunwmefz.us-east-1.rds.amazonaws.com",
+        "port": "5432"
     }
 }
 

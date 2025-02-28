@@ -3,7 +3,7 @@ from core.db_connection import db_connection
 connection = db_connection()
 
 class OperationsSQL:
-    def get(self, table, where):
+    def get(table, where):
         query = f"SELECT * FROM {table} WHERE {where} LIMIT 1"
         try:
             with connection.cursor() as cursor:
@@ -18,7 +18,7 @@ class OperationsSQL:
             print(f"Get error: {e}")
             return False
     
-    def filter(self, table, where='', order_by='', ordering='', inner_join='', select='', limit_per_page=5, page=1):
+    def filter(table, where='', order_by='', ordering='', inner_join='', select='', limit_per_page=5, page=1):
         offset = (page - 1) * limit_per_page
         
         select = '*'
@@ -53,7 +53,7 @@ class OperationsSQL:
             print(f"Erro ao executar a consulta 'filter': {e}")
             return []
         
-    def count(self, table, field_count='*', where='', inner_join=''):
+    def count(table, field_count='*', where='', inner_join=''):
         select = 'COUNT(' + field_count + ') AS total'
         inner_join = ""
         where = f"WHERE {where}" if where else ""
@@ -77,7 +77,7 @@ class OperationsSQL:
             print(f"Count error: {e}")
             return []
     
-    def update(self, table, where, fields_values):
+    def update(table, where, fields_values):
         set_clause = ", ".join([f"{field} = %s" for field in fields_values])
         query = f"UPDATE {table} SET {set_clause} WHERE {where}"
 
@@ -91,7 +91,7 @@ class OperationsSQL:
             print(f"Update error: {e}")
             return False
     
-    def create(self, table, fields_values):
+    def create(table, fields_values):
         fields = ", ".join([f"{field}" for field in fields_values])
         values_clause = ", ".join([f"%s" for i in fields_values])
         query = f"""
@@ -109,7 +109,7 @@ class OperationsSQL:
             print(f"Insert error: {e}")
             return False
     
-    def delete(self, table, where):
+    def delete(table, where):
         query = f"""
             DELETE FROM {table}
             WHERE {where}
